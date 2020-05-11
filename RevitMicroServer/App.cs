@@ -54,9 +54,6 @@ namespace RevitMicroServer
                 .WithLocalSessionManager()
                 .WithWebApi("/api", m => m
                     .WithController<DummyController>())
-                //.WithModule(new WebSocketRevitModule("/revit"))
-                //.WithStaticFolder("/", HtmlRootPath, true, m => m
-                //    .WithContentCaching(UseFileCache)) // Add static files after other modules to avoid conflicts
                 .WithModule(new ActionModule("/", HttpVerbs.Any, ctx => ctx.SendDataAsync(new { Message = "Error" })));
 
             // Listen for state changes.
