@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevitMicroServer", "RevitMicroServer\RevitMicroServer.csproj", "{F25721AC-33C0-4454-9415-CFA86451C50D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{514DC9CC-3031-4BA6-808A-4844C23AD8E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{BB52402E-F036-4EA6-8070-FB9FE0CF7855}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,10 @@ Global
 		{F25721AC-33C0-4454-9415-CFA86451C50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F25721AC-33C0-4454-9415-CFA86451C50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F25721AC-33C0-4454-9415-CFA86451C50D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{514DC9CC-3031-4BA6-808A-4844C23AD8E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{514DC9CC-3031-4BA6-808A-4844C23AD8E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{514DC9CC-3031-4BA6-808A-4844C23AD8E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{514DC9CC-3031-4BA6-808A-4844C23AD8E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,14 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RevitAddIns>
-  <AddIn Type="Command">
-    <Text>Command RevitMicroServer</Text>
-    <Description>Some description for RevitMicroServer</Description>
-    <Assembly>RevitMicroServer.dll</Assembly>
-    <FullClassName>RevitMicroServer.Command</FullClassName>
-    <ClientId>64acde85-b033-430c-91cd-bcb05c0e64e5</ClientId>
-    <VendorId>www.aecom.com</VendorId>
-    <VendorDescription>AECOM, http://www.aecom.com</VendorDescription>
-  </AddIn>
   <AddIn Type="Application">
     <Name>Application RevitMicroServer</Name>
     <Assembly>RevitMicroServer.dll</Assembly>

@@ -1,42 +1,24 @@
-#region Namespaces
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using Autodesk.Revit.ApplicationServices;
-using Autodesk.Revit.Attributes;
+﻿using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
-using Autodesk.Revit.UI.Selection;
 using EmbedIO;
-using EmbedIO.Actions;
-using EmbedIO.WebApi;
-using RevitMicroServer.Controllers;
-using Swan.Logging;
-#endregion
+using System;
+
 
 namespace RevitMicroServer
 {
     [Transaction(TransactionMode.Manual)]
-    public class Command : IExternalCommand
+    [Regeneration(RegenerationOption.Manual)]
+    public class StartServer : IExternalCommand
     {
-        private WebServer _server;
+        public WebServer WebServer { get; private set; }
 
-        public Result Execute(
-          ExternalCommandData commandData,
-          ref string message,
-          ElementSet elements)
+        public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
-            UIApplication uiapp = commandData.Application;
-            UIDocument uidoc = uiapp.ActiveUIDocument;
-            Application app = uiapp.Application;
-            Document doc = uidoc.Document;
-
-            
-            // Access current selection
-
+            var u = new Utils();
+            WebServer = u.CreateWebServer(commandData);
+            WebServer.RunAsync();
             return Result.Succeeded;
         }
-        
-
     }
 }

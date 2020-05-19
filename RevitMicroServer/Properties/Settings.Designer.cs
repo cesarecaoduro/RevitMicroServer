@@ -22,5 +22,29 @@ namespace RevitMicroServer.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost")]
+        public string BASEURL {
+            get {
+                return ((string)(this["BASEURL"]));
+            }
+            set {
+                this["BASEURL"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5002")]
+        public string PORT {
+            get {
+                return ((string)(this["PORT"]));
+            }
+            set {
+                this["PORT"] = value;
+            }
+        }
     }
 }
