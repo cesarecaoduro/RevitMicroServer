@@ -1,6 +1,7 @@
 ﻿# Revit Micro Server
 
-Give to Revit the ability to act as a REST server creatingend points in the application context
+Give to Revit the ability to act as a REST server creatingend points in the application context.
+file: ![RevitMicroServer](Resources/RevitMicroServer.gif)
 
 ## Architecture
 The application uses [EmbedIO](https://github.com/unosquare/embedio) to start a tiny server that can answer to rest calls.

@@ -10,12 +10,11 @@ namespace RevitMicroServer.Controllers
 {
     public sealed class ApplicationController : WebApiController
     {
+        private UIApplication Application { get; }
         public ApplicationController(UIApplication application)
         {
             Application = application;
         }
-
-        public UIApplication Application { get; }
 
         [Route(HttpVerbs.Get, "/application/document")]
         public Document GetActiveDocument()

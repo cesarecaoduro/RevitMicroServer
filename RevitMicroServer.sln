@@ -8,6 +8,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{514DC9CC-3031-4BA6-808A-4844C23AD8E5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{BB52402E-F036-4EA6-8070-FB9FE0CF7855}"
+	ProjectSection(SolutionItems) = preProject
+		RevitMicroServer\README.md = RevitMicroServer\README.md
+		..\..\..\Desktop\Screenshot\RevitMicroServer.gif = ..\..\..\Desktop\Screenshot\RevitMicroServer.gif
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
