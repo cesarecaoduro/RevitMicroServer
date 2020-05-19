@@ -8,7 +8,7 @@ The application uses [EmbedIO](https://github.com/unosquare/embedio) to start a 
 
 ### How to
 
-Create a server in the [Utils.cs](Utils/Utils.cs)
+Create a server in the [Utils.cs](RevitMicroServer/Utils/Utils.cs)
 
 ```
 public WebServer CreateWebServer(ExternalCommandData commandData)
@@ -29,7 +29,7 @@ public WebServer CreateWebServer(ExternalCommandData commandData)
     return server;
 ```
 
-Define new controllers [ApplicationController.cs](Controllers/ApplicationController.cs)
+Define new controllers [ApplicationController.cs](RevitMicroServer/Controllers/ApplicationController.cs)
 
 ```
 public sealed class ApplicationController : WebApiController
