@@ -1,7 +1,10 @@
 ﻿# Revit Micro Server
 
-Give to Revit the ability to act as a REST server creatingend points in the application context.
-file: ![RevitMicroServer](Resources/RevitMicroServer.gif)
+Let's give to Revit the ability to act as a REST server creating end points in the application context.
+
+![RevitMicroServer](Resources/RevitMicroServer.gif)
+
+Still in the very early stages so...feel free to <strong>contribute</strong> with the usual pull process!
 
 ## Architecture
 The application uses [EmbedIO](https://github.com/unosquare/embedio) to start a tiny server that can answer to rest calls.
@@ -10,7 +13,7 @@ The application uses [EmbedIO](https://github.com/unosquare/embedio) to start a 
 
 Create a server in the [Utils.cs](RevitMicroServer/Utils/Utils.cs)
 
-```
+```csharp
 public WebServer CreateWebServer(ExternalCommandData commandData)
 {
     var url = string.Format("{0}:{1}", Settings.Default.BASEURL, Settings.Default.PORT);
@@ -31,7 +34,7 @@ public WebServer CreateWebServer(ExternalCommandData commandData)
 
 Define new controllers [ApplicationController.cs](RevitMicroServer/Controllers/ApplicationController.cs)
 
-```
+```csharp
 public sealed class ApplicationController : WebApiController
 {
     public ApplicationController(UIApplication application)
@@ -55,11 +58,19 @@ public sealed class ApplicationController : WebApiController
 
 And additional DTOs if needed in the <em>Domain</em> project
 
-```
+```csharp
 public class Document
 {
     public string Title { get; set; }
     public string Path { get; set; }
 }
 ```
+
+## To do list
+
+- [ ] Add Stop server command
+- [ ] Add front end project
+- [ ] Implement push button start an Electron application 
+- [ ] Add more controllers
+- [ ] A lot more...
 
