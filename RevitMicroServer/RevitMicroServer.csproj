@@ -113,12 +113,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{514DC9CC-3031-4BA6-808A-4844C23AD8E5}</Project>
-      <Name>Domain</Name>
+    <ProjectReference Include="..\DomainDotNet\DomainDotNet.csproj">
+      <Project>{8f2d5b90-d155-42a8-a964-e21078683bbe}</Project>
+      <Name>DomainDotNet</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
